@@ -1,0 +1,38 @@
+﻿[
+  {
+    "name": "עידו בלייכר",
+    "people": 31,
+    "salary": 10,
+    "precent": 0.1,
+    "bottle": 0
+  },
+  {
+    "name": "עומר גפלה",
+    "people": 31,
+    "salary": 10,
+    "precent": 0.1,
+    "bottle": 0
+  },
+  {
+    "name": "ניב אמסלם",
+    "people": 31,
+    "salary": 10,
+    "precent": 0.1,
+    "bottle": 0
+  },
+  {
+    "name": "יפרח רותם",
+    "people": 31,
+    "salary": 10,
+    "precent": 0.1,
+    "bottle": 0
+  },
+  {
+    "name": "שרון אדם",
+    "people": 31,
+    "salary": 10,
+    "precent": 0.1,
+    "bottle": 0
+  }
+
+]

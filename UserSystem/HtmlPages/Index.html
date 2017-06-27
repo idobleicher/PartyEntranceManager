@@ -1,0 +1,80 @@
+﻿<html>
+
+<head>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="Index.js"></script>
+    <link rel="stylesheet" href="Index.css">
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Controllers/indexController.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body ng-app="IndexApp" style="background-image: url('../Images/Wall.jpeg')">
+    <div class="container" ng-controller="indexController" style="background-color:white;margin-top:60px">
+        <div style="text-align: right"><h1>יחצנים</h1><button class="btn btn-primary" ng-click="addYach()">הוסף</button><input type="text" ng-model="txtName" class ="bton alpha" placeholder="שם יחצן" id="nameTake" />&nbsp;: שם מלא <button class="btn btn-warning" ng-click="Export()">יצא אקסל</button>    <button class="btn btn-success" ng-click="Save()">שמור </button><button class="btn btn-danger" ng-click="Reset()" style="margin-left:5px">חדש</button> </div>
+        <form action="#" method="get">
+            <div class="SearchView" style="text-align: right">
+            <div class="input-group" style="margin-top:5px">
+            <span class="input-group-btn">
+            <button class="btn btn-primary btor" type="submit">  <i class="glyphicon glyphicon-search "></i></button>
+            </span>
+            <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+            <input class="form-control bton" id="system-search"  name="q" placeholder="שם יחצן" required>
+
+            </div>
+            </div>
+            </form>
+        <div class="AddPeople">
+
+        </div>
+        <div class="WhoCameTable">
+
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-list-search" style="text-align:right">
+                        <thead>
+                            <tr style="text-align:right">
+                                <th style="text-align:right">מחיקה</th>
+                                <th style="text-align:right">להוסיף</th>
+                                <th style="text-align:right">בקבוקים</th>
+                                <th style="text-align:right">להוסיף</th>
+                                <th style="text-align:right">כמות אנשים</th>
+                                <th style="text-align:right">שם יחצן</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jqusery">
+                            <tr ng-repeat="data in tabelsData">
+                                <td><button class="btn btn-primary" ng-click="Del($index)" style="margin-top:15.8%">מחק</button></td>
+                                <td>
+                                    <button class="btn btn-primary" ng-click="bot($index,-foo)">
+                                        להוריד
+                                    </button>
+                                    <button class="btn btn-danger" ng-click="bot($index,foo)">
+                                        להוסיף
+                                    </button>
+                                    <input type="text" style="text-align:right" ng-model="foo" />
+                                    <img src="../Images/Fifty.png" style="width:100px" ng-click="bot($index,50)"/>
+                                    <img src="../Images/Hundred.png" ng-click="bot($index,100)" style="width:100px" />
+                                    <img src="../Images/TwoHundred.png" ng-click="bot($index,200)" style="width:100px"  />
+
+
+
+                                </td>
+                                <td>{{data.bottle}}</td>
+                                <td><button class="btn btn-danger" ng-click="accept($index,1)"><i class="glyphicon glyphicon-plus-sign "></i></button><button class="btn btn-primary" ng-click="accept($index,-1)"><i class="glyphicon glyphicon-minus-sign "></i></button></td>
+                                <td>{{data.people}}</td>
+                                 <td>{{data.name}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+</div>
+
+</body>
+</html>
